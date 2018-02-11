@@ -1,0 +1,25 @@
+header h1{
+font-family: 'Berkshire Swash', cursive;
+text-align: center;
+justify-content: center;
+
+}
+header p{
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+header{
+  background: #7F170E;
+  color:white;
+}
+button{
+  justify-content: center;
+}
+
+#button{
+  padding-top: 10em;
+}
+nav a{
+  color: #7F170E;
+}
