@@ -23,3 +23,11 @@ button{
 nav a{
   color: #7F170E;
 }
+
+/* Styling for my game */
+
+#playground{
+  margin:auto;
+  background: #eee;
+  border: 1px solid #ccc;
+}
