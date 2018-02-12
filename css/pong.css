@@ -1,0 +1,11 @@
+canvas{
+  margin-left: 40em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  justify-content: center;
+  border: 1px 1px 1px 1px solid;
+}
+#console{
+  text-align: center;
+  font-family: 'Concert One', cursive;
+}
