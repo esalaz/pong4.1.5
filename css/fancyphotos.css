@@ -4,10 +4,9 @@ body
   margin:0;
   min-height:3000px;
 }
-.photo-container
-{
+.photo-container{
 
-  height:650px;
+  height:550px;
   margin: 0 auto;
   position:relative;
   display:block;

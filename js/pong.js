@@ -1,6 +1,6 @@
 var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-        window.setTimeout(callback, 1000 / 60);
-    };
+  window.setTimeout(callback, 1000 / 60);
+};
 var canvas = document.createElement("canvas");
 var width = 400;
 var height = 600;
@@ -14,32 +14,32 @@ var ball = new Ball(200, 300);
 var keysDown = {};
 
 var render = function () {
-    context.fillStyle = "#FF00FF";
-    context.fillRect(0, 0, width, height);
-    player.render();
-    computer.render();
-    ball.render();
+  context.fillStyle = "#FF00FF";
+  context.fillRect(0, 0, width, height);
+  player.render();
+  computer.render();
+  ball.render();
 };
 
 var update = function () {
-    player.update();
-    computer.update(ball);
-    ball.update(player.paddle, computer.paddle);
+  player.update();
+  computer.update(ball);
+  ball.update(player.paddle, computer.paddle);
 };
 
 var step = function () {
-    update();
-    render();
-    animate(step);
+  update();
+  render();
+  animate(step);
 };
 
 function Paddle(x, y, width, height) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-    this.x_speed = 0;
-    this.y_speed = 0;
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+  this.x_speed = 0;
+  this.y_speed = 0;
 }
 
 Paddle.prototype.render = function () {
@@ -48,16 +48,16 @@ Paddle.prototype.render = function () {
 };
 
 Paddle.prototype.move = function (x, y) {
-    this.x += x;
-    this.y += y;
-    this.x_speed = x;
-    this.y_speed = y;
-    if (this.x < 0) {
-        this.x = 0;
-        this.x_speed = 0;
-    } else if (this.x + this.width > 400) {
-        this.x = 400 - this.width;
-        this.x_speed = 0;
+  this.x += x;
+  this.y += y;
+  this.x_speed = x;
+  this.y_speed = y;
+  if (this.x < 0) {
+    this.x = 0;
+    this.x_speed = 0;
+  } else if (this.x + this.width > 400) {
+    this.x = 400 - this.width;
+    this.x_speed = 0;
     }
 };
 
