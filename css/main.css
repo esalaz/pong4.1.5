@@ -18,7 +18,7 @@ button{
 }
 
 #button{
-  padding-top: 10em;
+  padding-top: .2em;
 }
 nav a{
   color: #7F170E;
@@ -48,3 +48,47 @@ nav a{
 }
 
 /* IMAGE SLIDER */
+
+@keyframes slider {
+  0%{
+    left: :0;
+  }
+
+  20%{
+    Left: 0%;
+  }
+  25%{
+    Left: -100%;
+  }
+  45%{
+    Left: -100%;
+  }
+  50%{
+    Left: -200%;
+  }
+  70%{
+    Left: -200%;
+  }
+  75{
+    left: -300%;
+  }
+  95%{
+    Left: -400%
+  }
+  100%{
+    Left: -400%;
+  }
+}
+#slider {
+  overflow: hidden;
+}
+#slider figure img{
+  position: relative;
+    width: 40%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slider infinite;
+  }
+}
