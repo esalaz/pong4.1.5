@@ -1,12 +1,27 @@
-var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
+// ASSIGN ANIMATE TO wonowd.requestAnimationFrame
+// We also assign fall backs after the (||) or operator for better brower compatibility.
+  var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
+
+  function (callback) {
   window.setTimeout(callback, 1000 / 60);
-};
-var canvas = document.createElement("canvas");
-var width = 400;
-var height = 600;
-canvas.width = width;
-canvas.height = height;
-var context = canvas.getContext('2d');
+  };
+
+// ASSIGNING VARIABLES FOR OUR CANVAS: AS WELL AS ASSIGNING THOSE VALUES CREATE AND TO SET HEIGHT AND WIDTH
+// Now in order to perform rendering we’ll need to setup a canvas and grab its 2d context:
+
+  var canvas = document.createElement("canvas");  // now calling canvas is the same as creating a element "canvas"
+  var width = 400; //Now we assing some number to our width and hight that we will use for our canvas later
+  var height = 600;
+
+  canvas.width = width; //now we call canvas and add the method with as well as feeding it a value of 400
+  canvas.height = height; // same for my height
+  var context = canvas.getContext('2d');
+
+
+
+// ASSIGNING VARIABLES FOR OUR ACTUALL GAME
+
+
 var player = new Player();
 var computer = new Computer();
 var ball = new Ball(200, 300);
@@ -14,7 +29,7 @@ var ball = new Ball(200, 300);
 var keysDown = {};
 
 var render = function () {
-  context.fillStyle = "#FF00FF";
+  context.fillStyle = "black";
   context.fillRect(0, 0, width, height);
   player.render();
   computer.render();
@@ -43,7 +58,7 @@ function Paddle(x, y, width, height) {
 }
 
 Paddle.prototype.render = function () {
-    context.fillStyle = "#0000FF";
+    context.fillStyle = "white";
     context.fillRect(this.x, this.y, this.width, this.height);
 };
 
@@ -116,7 +131,7 @@ function Ball(x, y) {
 Ball.prototype.render = function () {
     context.beginPath();
     context.arc(this.x, this.y, 5, 2 * Math.PI, false);
-    context.fillStyle = "#000000";
+    context.fillStyle = "#FF00FF";
     context.fill();
 };
 

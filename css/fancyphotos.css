@@ -29,12 +29,12 @@ body
 .parallax.left{left:0;}
 .parallax.right{right:0;}
 .parallax.middle{right:0;left:0;margin:0 auto;}
-.parallax.lower50{top:50px;}
-.parallax.lower100{top:100px;}
+.parallax.lower50{top:100px;}
+.parallax.lower100{top:2000px;}
 .parallax.top{z-index:2;}
 .parallax.bottom{z-index:1;}
 
 img{
-  width: 50em;
+  width: 60em;
   height: 30em;
 }
