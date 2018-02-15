@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Linking my main CSS File  -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pong.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pong.css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 
 
@@ -33,16 +33,7 @@
       <p>This is where i will have a description of the game</p>
     </header>
     <!-- Navingation -->
-    <nav>
-      <ul class="nav nav-tabs justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-      </ul>
-    </nav>
+
     <!-- Button To Toggle Game-->
       <!-- <div id="button" class="text-center"> -->
         <!-- <button type="button" class="btn btn-outline-danger">PLAY MY PONG!</button> -->
@@ -52,11 +43,31 @@
       <!-- <p>Computer: <span id="scoreLeft">0</span></p> -->
       <!-- <p>Player: <span id="scoreRight">0</span></p> -->
       <h2>Use Left and Right Arrow Keys</h2>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Press Me for More Info!
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body"></h3>Something here</h3></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <br>
-      <br>
       <!-- Linking my pong game file!  -->
-      <script src="../js/pong.js"></script>
+      <script src="js/pong.js"></script>
 
 
         <!-- Adding my bootstrap js files -->
@@ -71,8 +82,10 @@
      <!-- Adding Bootstrap Javascript Files  -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"</script>
+
     <!-- Linking my pong game file!  -->
-    <script src="../js/pong.js"></script>
+    <script src="js/pong.js"></script>
 
   </body>
 </html>

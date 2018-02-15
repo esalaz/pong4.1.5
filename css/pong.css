@@ -1,8 +1,58 @@
+body{
+  background-image: url("https://i.pinimg.com/originals/f6/12/cc/f612ccdc0817a71732f80ff2bd0e1f6a.jpg");
+}
+
+header h1{
+font-family: 'Berkshire Swash', cursive;
+text-align: center;
+justify-content: center;
+
+}
+
+header{
+  background: #7F170E;
+  color:white;
+}
+
+header p{
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+
 canvas{
-  margin-left: 7.5em;
+  margin: 10em;
 
 }
 #console{
+
+}
+#playground{
+  margin:auto;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+#console{
+  position: abosolute;
+  top: 410px;
+  width: 560px;
+  padding: 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  margin: 10px auto 0 auto;
+  overflow: auto;
   text-align: center;
   font-family: 'Concert One', cursive;
+}
+
+button{
+  justify-content: center;
+}
+
+#button{
+  padding-top: .2em;
+}
+nav a{
+  color: #7F170E;
 }

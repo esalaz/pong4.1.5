@@ -12,3 +12,5 @@ In really I hopped to do so much more which took so much more time. I have to pu
 For the nav I used a simple nav using bootstrap, simply added the nav and nav-tabs class to change the styling.
 
 For my about me I attemped to use the parallax css property to display images to showcase myself.
+
+MY
