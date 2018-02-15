@@ -28,7 +28,7 @@ function (callback) {
 
 var canvas = document.createElement("canvas");  // now calling canvas is the same as creating a element "canvas"
 var width = 400; // creating variables that will house our width and height
-var height = 600; // 
+var height = 600; //
 canvas.width = width; // now we have
 canvas.height = height; // same for my height
 var context = canvas.getContext('2d');
@@ -148,7 +148,7 @@ var step = function () {
 
 
 /////////////////////////////////////////////////////////////////////
-///// PADDlES!  
+///// PADDlES!
 ////////////////////////////////////////////////////////////////////
 
 // LEts create the paddle objects so they can render on screen
@@ -184,7 +184,7 @@ Paddle.prototype.render = function () {
 
 
 
-// then we move to the next section... Prototyping the Paddle the 
+// then we move to the next section... Prototyping the Paddle the
 
 
 
@@ -206,15 +206,27 @@ Paddle.prototype.move = function (x, y) { //When we call the move function we wi
     }
 };
 
+
+// Here we are using a function to create a new object from Paddle and giving it its position to load on the screen
+//
 function Computer() {
   this.paddle = new Paddle(175, 10, 50, 10);
 }
+
 
 Computer.prototype.render = function () {
     this.paddle.render();
   };
 
-  Computer.prototype.update = function (ball) {
+
+
+
+
+
+//  Computers AI
+//
+//
+Computer.prototype.update = function (ball) {
     var x_pos = ball.x;
     var diff = -((this.paddle.x + (this.paddle.width / 2)) - x_pos);
 
@@ -268,6 +280,18 @@ Ball.prototype.render = function () {
     context.fill();
 };
 
+
+
+
+
+
+
+
+//  Collision with the ball
+
+
+
+
 Ball.prototype.update = function (paddle1, paddle2) {
     this.x += this.x_speed;
     this.y += this.y_speed;
@@ -306,7 +330,7 @@ Ball.prototype.update = function (paddle1, paddle2) {
     }
 };
 
-//This is calling on document and with document finding body using append child and pasing in our parameter of canvas
+//This is calling on document and with document finding body using append child and pasing in our parameter of canvas, then we call the animate functiok
 document.body.appendChild(canvas);
 animate(step);
 
